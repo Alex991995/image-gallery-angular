@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  /* ===== Base Colors ===== */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* ===== Backgrounds ===== */
+  --bg-primary: #ffffff;
+  --bg-dark: #111111;
+  --bg-header: #151515;
+  --bg-footer: #0f0f0f;
+  --bg-card: #f5f5f5;
+
+  /* ===== Accent (Orange from screenshot) ===== */
+  --color-accent: #f59e0b;
+  --color-accent-hover: #d97706;
+
+  /* ===== Text Colors ===== */
+  --text-primary: #111111;
+  --text-secondary: #6b7280;
+  --text-light: #ffffff;
+  --text-muted: #9ca3af;
+
+  /* ===== Borders ===== */
+  --border-light: #e5e7eb;
+  --border-dark: #2a2a2a;
+
+  /* ===== Shadows ===== */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
