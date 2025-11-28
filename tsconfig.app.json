@@ -3,35 +3,8 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    // "baseUrl": "./src",
     "outDir": "./out-tsc/app",
     "types": [],
-    // "paths": {
-    //   "@core/services/*": [
-    //     "app/core/services/*"
-    //   ],
-    //   "@components/*": [
-    //     "app/shared/components/*"
-    //   ],
-    //   "@pages/*": [
-    //     "app/pages/*"
-    //   ],
-    //   "@services/*": [
-    //     "app/core/services/*"
-    //   ],
-    //   "@interceptors/*": [
-    //     "app/core/interceptors/*"
-    //   ],
-    //   "@interface/*": [
-    //     "app/shared/interface/*"
-    //   ],
-    //   "@helpers/*": [
-    //     "app/shared/helpers/*"
-    //   ],
-    //   "@layout/*": [
-    //     "app/layout/*"
-    //   ]
-    // }
   },
   "include": [
     "src/**/*.ts"

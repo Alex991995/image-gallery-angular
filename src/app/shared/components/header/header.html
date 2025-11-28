@@ -1,12 +1,27 @@
-<header>
-  <nav>
+<header class="header">
+  <nav class="nav">
     <div>
-      <img src="/public/logo.svg" alt="logo" />
+      <img src="/logo.svg" alt="logo" />
     </div>
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
+    <ul class="list">
+      <a
+        routerLink="/"
+        routerLinkActive="selected"
+        class="list__item"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <div class="img"></div>
+        <span class="list__text">Category</span>
+      </a>
+
+      <a routerLink="/images" routerLinkActive="selected" class="list__item">
+        <div class="img"></div>
+        <span class="list__text">Images</span>
+      </a>
+      <a routerLink="/favourites" routerLinkActive="selected" class="list__item">
+        <div class="img"></div>
+        <span class="list__text">Favorite</span>
+      </a>
     </ul>
   </nav>
 </header>

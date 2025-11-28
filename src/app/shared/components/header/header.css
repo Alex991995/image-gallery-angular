@@ -1,0 +1,33 @@
+.header {
+  background: var(--bg-gradient);
+}
+.nav {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: space-between;
+}
+.img {
+  width: 18px;
+  height: 18px;
+  background-color: white;
+
+  mask: url('/icons/category.svg') no-repeat center / contain;
+  -webkit-mask: url('/icons/category.svg') no-repeat center / contain;
+}
+.list {
+  display: flex;
+  gap: 70px;
+  .list__item {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+  }
+  .list__text {
+    font-size: 24px;
+  }
+}
+
+.list__item.selected .img {
+  background-color: #e0a449;
+}
