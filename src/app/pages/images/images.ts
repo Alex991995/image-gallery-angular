@@ -7,4 +7,8 @@ import { HeroBanner } from '@components/hero-banner/hero-banner';
   templateUrl: './images.html',
   styleUrl: './images.css',
 })
-export class Images {}
+export class Images {
+  findCategory() {
+    console.log('ss');
+  }
+}

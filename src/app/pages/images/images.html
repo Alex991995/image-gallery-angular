@@ -3,7 +3,16 @@
     <h2 class="hero-banner__title">Let's Find Some <span>Images</span></h2>
     <h2 class="hero-banner__title">Here!</h2>
 
-    <input type="text" class="hero-banner__input" />
+    <div class="hero-banner__search-container">
+      <input type="text" class="hero-banner__search-input" />
+      <img
+        src="/icons/search.svg"
+        alt="search"
+        class="hero-banner__search-icon"
+        (click)="findCategory()"
+        (keypress)="findCategory()"
+        tabindex="0"
+      />
+    </div>
   </div>
 </app-hero-banner>
-<p>images works!</p>

@@ -14,12 +14,22 @@
     color: #f17900;
   }
 }
-.hero-banner__input {
+.hero-banner__search-input {
   height: 54px;
   width: 100%;
   border: 1.5px solid rgba(167, 167, 167, 1);
   outline: none;
-  font-size: 17px;
-  padding: 20px;
+  font-size: 14px;
+  padding: 20px 0 20px 54px;
   border-radius: 8px;
+}
+
+.hero-banner__search-icon {
+  position: absolute;
+  left: 23px;
+  top: 36%;
+}
+
+.hero-banner__search-container {
+  position: relative;
 }
