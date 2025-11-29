@@ -52,3 +52,10 @@ a {
 .selected {
   color: #e0a449;
 }
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
