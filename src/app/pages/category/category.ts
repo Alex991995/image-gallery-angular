@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { HeroBanner } from '@components/hero-banner/hero-banner';
 
 @Component({
   selector: 'app-category',
-  imports: [],
+  imports: [HeroBanner],
   templateUrl: './category.html',
   styleUrl: './category.css',
 })

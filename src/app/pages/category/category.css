@@ -1,0 +1,15 @@
+.hero-banner__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.hero-banner__title {
+  font-size: 96px;
+  margin: 0;
+  & span {
+    color: #f17900;
+  }
+}
