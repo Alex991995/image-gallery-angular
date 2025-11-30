@@ -5,32 +5,10 @@
   </div>
 </app-hero-banner>
 
-<!-- <div class="category-grid" role="list">
-  <a
-    *ngFor="let c of categories"
-    class="card"
-    [routerLink]="['/category', c.slug]"
-    role="listitem"
-    aria-label="{{ c.name }}"
-  >
-    <div
-      class="card__bg"
-      [ngStyle]="{ 'background-image': 'url(' + c.image + ')' }"
-      aria-hidden="true"
-    ></div>
-
-    <div class="card__overlay"></div>
-
-    <span class="card__label">{{ c.name }}</span>
-  </a>
-</div> -->
 <div class="category-grid" role="list">
   @for (c of arrayCategories(); track $index) {
-    <a class="card" [routerLink]="['/category', c.slug]" role="listitem" aria-label="{{ c.name }}">
-      <div class="card__bg" aria-hidden="true"></div>
-
-      <div class="card__overlay"></div>
-      <img [src]="c.image" alt="category" />
+    <a class="card" [routerLink]="['/images']">
+      <img class="card__image" [src]="c.image" alt="category" />
       <span class="card__label">{{ c.name }}</span>
     </a>
   }

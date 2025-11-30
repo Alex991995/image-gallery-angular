@@ -5,6 +5,8 @@
   transform: translate(-50%, -50%);
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 100%;
 }
 .hero-banner__title {
   font-size: 96px;
@@ -14,46 +16,23 @@
   }
 }
 
-:host {
-  display: block;
-  padding: 16px;
-  box-sizing: border-box;
-  --gap: 18px;
+@media (max-width: 768px) {
+  .hero-banner__title {
+    font-size: clamp(48px, 10vw, 72px);
+  }
 }
 
-/* Responsive grid */
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--gap);
-  align-items: stretch;
-  margin-top: 100px;
+  grid-template-columns: repeat(3, minmax(auto, 285px));
+  gap: 26px;
+  justify-content: center;
+  grid-auto-rows: 244px;
+  margin: 40px 10px 95px;
 }
 
-/* breakpoints */
-@media (max-width: 1100px) {
-  .category-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (max-width: 760px) {
-  .category-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 420px) {
-  .category-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Card */
 .card {
   position: relative;
-  display: block;
-  height: 180px;
-  border-radius: 4px;
-  overflow: hidden;
   text-decoration: none;
   cursor: pointer;
   outline: none;
@@ -63,58 +42,33 @@
     box-shadow 220ms ease;
 }
 
-/* accessible focus */
-.card:focus-visible {
-  box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.35);
-  z-index: 2;
+.card__image-container {
+  width: 100%;
+  height: 100%;
 }
 
-/* background image */
-.card__bg {
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  transform-origin: center;
-  transition: transform 320ms ease;
-  will-change: transform;
 }
-
-/* dark overlay gradient for label contrast */
-.card__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.45) 100%);
-  pointer-events: none;
-}
-
-/* label style (bottom-left) */
 .card__label {
   position: absolute;
-  left: 12px;
-  bottom: 10px;
-  color: #fff;
+  z-index: 20;
+  font-size: 20px;
   font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.2px;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
-  z-index: 3;
+  color: aliceblue;
+  bottom: 7%;
+  left: 5%;
+  text-shadow:
+    -1px -1px 0 rgba(0, 0, 0, 1),
+    1px -1px 0 rgba(0, 0, 0, 1),
+    -1px 1px 0 rgba(0, 0, 0, 1),
+    1px 1px 0 rgba(0, 0, 0, 1);
 }
-
-/* hover effect: subtle zoom & lift */
-.card:hover,
-.card:focus {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
-}
-.card:hover .card__bg,
-.card:focus .card__bg {
-  transform: scale(1.06);
-}
-
-/* optional small variant for very tall screens */
-@media (min-width: 1500px) {
-  .card {
-    height: 210px;
+@media (max-width: 600px) {
+  .category-grid {
+    grid-template-columns: 1fr;
   }
 }
