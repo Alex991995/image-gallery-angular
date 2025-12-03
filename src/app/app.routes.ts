@@ -9,7 +9,7 @@ export const routes: Routes = [
     children: [
       { path: '', component: Category },
       {
-        path: 'images',
+        path: 'images/:topic',
         loadComponent: () => import('@pages/images/images').then((m) => m.Images),
       },
       {

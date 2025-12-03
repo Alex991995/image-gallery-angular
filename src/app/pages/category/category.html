@@ -7,7 +7,7 @@
 
 <div class="category-grid" role="list">
   @for (c of arrayCategories(); track $index) {
-    <a class="card" [routerLink]="['/images']">
+    <a class="card" [routerLink]="['/images', c.slug]">
       <img class="card__image" [src]="c.image" alt="category" />
       <span class="card__label">{{ c.name }}</span>
     </a>

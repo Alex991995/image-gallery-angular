@@ -16,3 +16,10 @@
     </div>
   </div>
 </app-hero-banner>
+
+<app-pagination
+  [currentPage]="page()"
+  [totalPages]="totalPages"
+  (pageChange)="loadPage($event)"
+  [pagesToShow]="5"
+></app-pagination>
