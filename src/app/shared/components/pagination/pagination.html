@@ -1,0 +1,10 @@
+<div class="pagination">
+  <button (click)="goToPage(currentPage() - 1)">‹</button>
+
+  @for (page of pages; track $index) {
+    <button [class.active]="page === currentPage()" (click)="goToPage(page)">
+      {{ page }}
+    </button>
+  }
+  <button (click)="goToPage(currentPage() + 1)">›</button>
+</div>

@@ -1,0 +1,25 @@
+<app-hero-banner>
+  <div class="hero-banner__content">
+    <h2 class="hero-banner__title">Let's Find Some <span>Images</span></h2>
+    <h2 class="hero-banner__title">Here!</h2>
+
+    <div class="hero-banner__search-container">
+      <input type="text" class="hero-banner__search-input" />
+      <img
+        src="/icons/search.svg"
+        alt="search"
+        class="hero-banner__search-icon"
+        (click)="findCategory()"
+        (keypress)="findCategory()"
+        tabindex="0"
+      />
+    </div>
+  </div>
+</app-hero-banner>
+
+<app-pagination
+  [currentPage]="page()"
+  [totalPages]="totalPages"
+  (pageChange)="loadPage($event)"
+  [pagesToShow]="5"
+></app-pagination>
